@@ -15,7 +15,6 @@ function App() {
 	const [isConnectedToMetaMask, setIsConnectedToMetaMask] = useState(false);
 
 	async function connectToMetaMask() {
-		console.log("Connecting To MetaMask");
 		if (window.ethereum == null) {
 			setProvider(ethers.getDefaultProvider("homestead"));
 			setIsConnectedToMetaMask(false);
@@ -32,7 +31,6 @@ function App() {
 	useEffect(() => {
 		async function getBalances() {
 			if (provider == null) {
-				console.log("Provider is null; connect to MetaMask first");
 				return;
 			}
 			const ethBalance = await provider.getBalance(signer.getAddress());
