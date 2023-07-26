@@ -5,11 +5,17 @@
 	justify-content: center;
 }
 
-.balance {
-	display: flex;
-	flex-direction: row;
+.hero-section {
+	margin-bottom: 5px;
 }
 
-.balance-item {
+.hero-item {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.hero-item .text {
 	margin-right: 2px;
 }
