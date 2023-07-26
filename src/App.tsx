@@ -22,15 +22,15 @@ function App() {
 	const [_ethPriceInUsd, setEthPriceInUsd] = useState(null);
 
 	const [_usdcBalance, setUsdcBalance] = useState(null);
-	const [_usdcBalanceInUsd, setUsdcBalanceInUsd] = useState(null); // [1
+	const [_usdcBalanceInUsd, setUsdcBalanceInUsd] = useState(null);
 	const [_usdcPriceInUsd, setUsdcPriceInUsd] = useState(null);
 
 	const [_usdtBalance, setUsdtBalance] = useState(null);
-	const [_usdtBalanceInUsd, setUsdtBalanceInUsd] = useState(null); // [1
+	const [_usdtBalanceInUsd, setUsdtBalanceInUsd] = useState(null);
 	const [_usdtPriceInUsd, setUsdtPriceInUsd] = useState(null);
 
 	const [_daiBalance, setDaiBalance] = useState(null);
-	const [_daiBalanceInUsd, setDaiBalanceInUsd] = useState(null); // [1
+	const [_daiBalanceInUsd, setDaiBalanceInUsd] = useState(null);
 	const [_daiPriceInUsd, setDaiPriceInUsd] = useState(null);
 
 	const [_shibBalance, setShibBalance] = useState(null);
