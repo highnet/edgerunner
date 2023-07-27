@@ -29,33 +29,21 @@ const SHIB_PEPE_PAIR_CONTRACT_ADDRESS =
 function App() {
 	const [_signer, setSigner] = useState(null);
 	const [_provider, setProvider] = useState(null);
-
 	const [_isConnectedToMetaMask, setIsConnectedToMetaMask] = useState(false);
-
 	const [_walletAddress, setWalletAddress] = useState(null);
-
 	const [_ethBalance, setEthBalance] = useState(null);
-
 	const [_usdcBalance, setUsdcBalance] = useState(null);
-
 	const [_usdtBalance, setUsdtBalance] = useState(null);
-
 	const [_daiBalance, setDaiBalance] = useState(null);
-
 	const [_shibBalance, setShibBalance] = useState(null);
-
 	const [_pepeBalance, setPepeBalance] = useState(null);
-
 	const [_UsdcUsdtPair, setUsdcUsdtPair] = useState(null);
 	const [_UsdcDaiPair, setUsdcDaiPair] = useState(null);
 	const [_UsdcShibPair, setUsdcShibPair] = useState(null);
 	const [_UsdcPepePair, setUsdcPepePair] = useState(null);
-
 	const [_UsdtDaiPair, setUsdtDaiPair] = useState(null);
 	const [_UsdtShibPair, setUsdtShibPair] = useState(null);
-
 	const [_DaiShibPair, setDaiShibPair] = useState(null);
-
 	const [_ShibPepePair, setShibPepePair] = useState(null);
 
 	async function getUsdcUsdtPair() {
@@ -273,7 +261,8 @@ function App() {
 				_provider
 			);
 			const usdtBalance = await usdtContract.balanceOf(_signer.getAddress());
-			setUsdtBalance(usdtBalance.toString());
+			const finalUsdtBalance = Number(usdtBalance) / 10 ** 6;
+			setUsdtBalance(finalUsdtBalance.toString());
 
 			const daiContract = new ethers.Contract(
 				DAI_CONTRACT_ADDRESS,
@@ -370,7 +359,7 @@ function App() {
 						<div className="hero-section">
 							<div className="hero-item">
 								<Typography>Your USDT Balance: </Typography>
-								{_usdcBalance !== null && (
+								{_usdtBalance !== null && (
 									<Typography>{_usdtBalance}</Typography>
 								)}
 								<Typography>USDT</Typography>
